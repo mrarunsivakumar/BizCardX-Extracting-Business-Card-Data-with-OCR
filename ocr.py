@@ -10,7 +10,7 @@ import cv2
 db = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="arunsiva",
+  password="your password",
   database="business_cards"
 )
 
