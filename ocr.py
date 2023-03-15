@@ -1,3 +1,4 @@
+#import necessary packages
 import easyocr as ocr  #OCR
 import streamlit as st  #Web App
 from PIL import Image #Image Processing
@@ -95,9 +96,9 @@ if selected == 'View':
    result = cursor.fetchall()
    df = pd.DataFrame(result, columns=['id', 'name', 'job_title', 'address', 'postcode', 'phone', 'email', 'website', 'company_name'])
    st.write(df)
-
+# update the stored business card information
 if selected == 'Update':
-    # Create a dropdown menu to select a business card to update
+   
     cursor.execute("SELECT id, name FROM ocr_results")
     result = cursor.fetchall()
     business_cards = {}
